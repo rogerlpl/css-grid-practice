@@ -1,0 +1,33 @@
+body {
+    font-family: Arial;
+    color: whitesmoke;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [start] 1fr [line2] 1fr [line3] 1fr [highlights-end] 1fr [line5] 1fr [highlights2-end] 1fr [line7] 1fr [end];
+    grid-template-rows: [start] 200px 200px [end];
+    grid-gap: 5px;
+    height: 100vh;
+    /* grid-auto-flow: column; */
+    /* grid-auto-columns: 50px 100px; */
+    grid-auto-rows: 50px 100px
+}
+
+.item {
+    background:#3697DA;
+    padding: 10px;
+    border: 4px solid #E54D3E;
+}
+
+.item:nth-of-type(1){
+    grid-column:  start / highlights-end;
+    grid-row: start/ end
+}
+.item:nth-of-type(2){
+    grid-column:  highlights-end / highlights2-end;
+    grid-row: start/ end
+}
+.item:nth-of-type(3){
+    grid-column:  highlights2-end / end;
+}
